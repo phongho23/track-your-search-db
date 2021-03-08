@@ -8,3 +8,9 @@
 {"message":"Week with id 8 created","level":"info"}
 {"message":"Job with id 7 deleted.","level":"info"}
 {"message":"Job with id 6 deleted.","level":"info"}
+{"message":"name is required","level":"error"}
+{"message":"Week with id 9 created","level":"info"}
+{"message":"Week with id 10 created","level":"info"}
+{"message":"Week with id 11 created","level":"info"}
+{"message":"Week with id 12 created","level":"info"}
+{"message":"Week with id 13 created","level":"info"}
