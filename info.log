@@ -1,0 +1,10 @@
+{"message":"weekId is required","level":"error"}
+{"message":"Bookmark with id 6 created.","level":"info"}
+{"message":"Bookmark with id 7 created.","level":"info"}
+{"message":"Week with id 4 created","level":"info"}
+{"message":"Week with id 5 created","level":"info"}
+{"message":"Week with id 6 created","level":"info"}
+{"message":"Week with id 7 created","level":"info"}
+{"message":"Week with id 8 created","level":"info"}
+{"message":"Job with id 7 deleted.","level":"info"}
+{"message":"Job with id 6 deleted.","level":"info"}
