@@ -8,15 +8,14 @@ const bodyParser = express.json()
 
 const serializeJob = job => ({
     id: job.id,
-    name: xss(job.name),
+    jobtitle: xss(job.jobtitle),
     modified: new Date(job.modified),
     content: xss(job.content),
     weekId: job.weekId,
-    jobtitle: job.jobTitle,
-    companyname: job.companyName,
-    postedurl: job.postedUrl,
-    interview: job.interview,
-    jobrating: job.jobRating
+    companyname: xss(job.companyname),
+    postedurl: xss(job.postedurl),
+    interview: xss(job.interview),
+    jobrating: xss(parseInt(job.jobrating))
 });
 
 jobsRouter
@@ -29,10 +28,10 @@ jobsRouter
         .catch(next)
     })
     .post(bodyParser, (req, res, next) => {
-        const { name, content, weekId } = req.body
-        const newJob = { name, content, weekId  }
+        const { content, weekId, companyname, postedurl, interview, jobrating, jobtitle } = req.body
+        const newJob = { content, weekId, companyname, postedurl, interview, jobrating, jobtitle  }
 
-        for (const field of ['name', 'content', 'weekId']) {
+        for (const field of ['content', 'weekId', 'companyname', 'postedurl', 'interview', 'jobrating', 'jobtitle']) {
             if (!newJob[field]) {
                 logger.error(`${field} is required`)
                 return res.status(400).send({
@@ -40,6 +39,7 @@ jobsRouter
                 })
             }
         }
+
     JobsService.insertJob(
         req.app.get('db'),
         newJob
