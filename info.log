@@ -72,3 +72,8 @@
 {"message":"Job with id 6 deleted.","level":"info"}
 {"message":"Job with id 5 deleted.","level":"info"}
 {"message":"Job with id 2 deleted.","level":"info"}
+{"message":"Bookmark with id 8 created.","level":"info"}
+{"message":"Bookmark with id 9 created.","level":"info"}
+{"message":"Bookmark with id 10 created.","level":"info"}
+{"message":"Week with id 4 created","level":"info"}
+{"message":"Bookmark with id 11 created.","level":"info"}
